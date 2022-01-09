@@ -22,7 +22,7 @@ kafkaConsumer.subscribe(topics);
 ```java
 
 while (true) {
-        FileWriter fileWriter = new FileWriter("user-json-data.txt", true);
+        FileWriter fileWriter = new FileWriter("prakhar-json-kafka-data.txt", true);
         ConsumerRecords<String, User> consumerRecords = kafkaConsumer.poll(Duration.ofSeconds(1));
         for (ConsumerRecord<String, User> consumerRecord : consumerRecords) {
             System.out.printf(
@@ -39,7 +39,7 @@ while (true) {
 ### Then
 Just run the `Consumer.java` file. A terminal will open and there you can see your all messages from beginning produced by Producer.
 
-### In user-json-data.txt
+### In prakhar-json-kafka-data.txt
 > {"id":1, "name":"Prakhar", "age":25, "course":"Btech"}
 > 
 > {"id":2, "name":"Prakhar", "age":25, "course":"Btech"}
